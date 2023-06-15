@@ -23,26 +23,34 @@
 ## INIT ##
 
 const  data =
+
 -(Initial data returned from API, technically different depending on location but it will always be pulled the same way)
 
 const  input =
+
 -(User input (Zip Code))
 
 ## BEGIN ##
 
 Fetch(){
+
     -IF Event (User inputs zip code)
+
     -FETCH (Pulls information from API)
 }
 
 CATCH (Catches any errors) {
+
     -(ex: Zipcode is more than 5 digits)
+
     -RETURN Error Message
 }
 
 ## END ##
 
 Render() {
+
     -IF fetch()
+
     -RETURN Data
 }
