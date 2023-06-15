@@ -2,7 +2,8 @@
 
 ## INFO ##
 
-    In this project we are tasked with creating a weather app that will display weather data pulled from an API based off of a user inputted zip code.
+    In this project we are tasked with creating a weather app that will display weather data pulled from an API
+     based off of a user inputted zip code.
 
     Some Functions should be ASYNC
 
@@ -22,26 +23,26 @@
 ## INIT ##
 
 const  data =
-(Initial data returned from API, technically different depending on location but it will always be pulled the same way)
+-(Initial data returned from API, technically different depending on location but it will always be pulled the same way)
 
 const  input =
-(User input (Zip Code))
+-(User input (Zip Code))
 
 ## BEGIN ##
 
 Fetch(){
-IF Event (User inputs zip code)
- FETCH (Pulls information from API)
+    -IF Event (User inputs zip code)
+    -FETCH (Pulls information from API)
 }
 
 CATCH (Catches any errors) {
-    (ex: Zipcode is more than 5 digits)
-    RETURN Error Message
+    -(ex: Zipcode is more than 5 digits)
+    -RETURN Error Message
 }
 
 ## END ##
 
 Render() {
-    IF fetch()
-    RETURN Data
+    -IF fetch()
+    -RETURN Data
 }
