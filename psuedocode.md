@@ -39,7 +39,7 @@ CATCH (Catches any errors) {
     RETURN Error Message
 }
 
-## RENDER ##
+## END ##
 
 Render() {
     IF fetch()
