@@ -14,14 +14,14 @@ let page = [
     { // This will be for page 1 with no data visible
         label:"ZIP Code",
         input:"",
-        button:"Get Weather",
+        getWeather:"Get Weather",
         currentWeather:"",
         back:""
     },
     { // This will be for page 2 with data visible and no buttons
         label:"",
         input:"",
-        button:"",
+        getWeather:"",
         currentWeather:"",
         back:""
     }
@@ -30,3 +30,31 @@ let page = [
 // Sets page number to 1
 let currentPage = 0;
 
+function nextPage() {
+    currentPage++;
+}
+
+function prevPage() {
+    currentPage--;
+}
+
+// Effects what elements are displayed on each page
+function changeState() {
+    if (currentPage === 0) {
+    label.style.visibility = 'visible'
+    input.style.visibility = 'visible'
+    getWeather.style.visibility = 'visible'
+    currentWeather.style.visibility = 'hidden'
+    back.style.visibility = 'hidden'
+}
+    else if (currentPage === 1) {
+        label.style.visibility = 'hidden'
+    input.style.visibility = 'hidden'
+    getWeather.style.visibility = 'hidden'
+    currentWeather.style.visibility = 'visible'
+    back.style.visibility = 'visible'
+    }
+}
+
+Btn.addEventListener('click', nextPage)
+back.addEventListener('click' prevPage)
