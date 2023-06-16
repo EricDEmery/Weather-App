@@ -3,7 +3,7 @@ const label = document.getElementById("label")
 const getWeather = document.getElementById("btn")
 const input = document.getElementById("input")
 const currentWeather = document.getElementById("weather")
-const location = document.getElementById("location")
+const locate = document.getElementById("locate")
 const kel = document.getElementById("kel")
 const far = document.getElementById("far")
 const cel = document.getElementById("cel")
@@ -56,5 +56,22 @@ function changeState() {
     }
 }
 
-Btn.addEventListener('click', nextPage)
-back.addEventListener('click' prevPage)
+function getWeatherData() {
+
+axios .get('https://api.openweathermap.org/data/2.5/weather?zip=40701,us&appid=4ae6e899c88552da0e4cb0abb5724071')
+.then((response) => {
+    //handle success
+    console.log(response);
+})
+.catch((error) => {
+    //handle error
+    console.log(error);
+})
+
+.finally(function () {
+
+});
+}
+
+Btn.addEventListener('click', getWeatherData)
+back.addEventListener('click', prevPage)
